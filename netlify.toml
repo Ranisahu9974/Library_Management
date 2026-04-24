@@ -1,0 +1,11 @@
+[build]
+  command = "chmod +x build.sh && ./build.sh"
+  publish = "build/web"
+
+[build.environment]
+  FLUTTER_WEB_USE_SKIA = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
